@@ -24,10 +24,10 @@ def load_saved_location():
     global __location
     global __data_columns
     global __model
-    with open('./columns.json','r') as f:
+    with open('./model/columns.json','r') as f:
         __data_columns=json.load(f)['data_columns']
         __location=__data_columns[3:]
-    with open('./bengalore_pickle','rb') as f:
+    with open('./model/bengalore_pickle','rb') as f:
         __model=pickle.load(f)
 if __name__ == '__main__':
     load_saved_location()
